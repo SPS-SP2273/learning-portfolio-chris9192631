@@ -69,7 +69,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 2,
    "id": "41e44a95",
    "metadata": {},
    "outputs": [],
@@ -176,31 +176,43 @@
    "execution_count": null,
    "id": "686b508b",
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "array([-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1])"
-      ]
-     },
-     "execution_count": 29,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
-    "list = [[66, 50, 57, -1, -1],\n",
+    "import numpy as np\n",
+    "num_list = [[66, 50, 57, -1, -1],\n",
     " [92, -1, 88, -1, -1],\n",
     " [75, -1, -1, 76, -1],\n",
     " [-1, 51, 87, -1, -1],\n",
-    " [71, -1, 67, -1, 69]]\n",
+    " [71, -1, 67, -1, 69]] \n",
     "\n",
+    "array = np.array(num_list)\n",
     "\n",
-    "array = np.array(list)\n",
-    "array[(array<50)]\n",
+    "#list is a function, use numlist or smt else instead \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "613f1d3a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[ 1  0  1 -1 -1]\n",
+      " [ 1 -1  1 -1 -1]\n",
+      " [ 1 -1 -1  1 -1]\n",
+      " [-1  1  1 -1 -1]\n",
+      " [ 1 -1  1 -1  1]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "array[array>50] = 1\n",
+    "array[array==50] = 0\n",
     "\n",
-    "\n",
-    "\n"
+    "print(array)"
    ]
   }
  ],
